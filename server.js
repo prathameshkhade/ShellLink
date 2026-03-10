@@ -22,7 +22,6 @@ app.use(cors({
 }));
 
 /* Handle preflight requests */
-app.use(cors());
 
 app.use(express.json());
 
