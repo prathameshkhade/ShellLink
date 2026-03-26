@@ -21,6 +21,10 @@ app.use(cors({
   ]
 }));
 
+app.get("/", (req, res) => {
+  res.json({ status: "ShellLink backend running" });
+});
+
 /* Handle preflight requests */
 
 app.use(express.json());
@@ -52,9 +56,7 @@ app.use("/api", systemRoutes);
 
 /* Health check route (useful for hosting platforms) */
 
-app.get("/", (req, res) => {
-  res.json({ status: "ShellLink backend running" });
-});
+
 
 /* Start server */
 
